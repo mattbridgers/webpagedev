@@ -8,7 +8,22 @@
 
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. <b>Mauris massa</b>. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. 
+
+<p id=clearMe>This paragraph should disappear, like magic!</p>
+<button onclick="clearBoard()">Clear</button>
+
+<script>
+		function clearBoard(size)
+		{
+			var paragraph = document.getElementById("clearMe");
+                        paragraph.innerHTML = "";
+		}
+</script>
 </p>
+
+
+
+
 <h2>Here is Ralph </h2>
 <p><img src="https://i.imgur.com/ptA3aRM.gif" width="300" alt="matt"
 </p>
