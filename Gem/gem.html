@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="favicon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<title>The Hidden Gem</title>
+	<style>
+		footer {display:block;clear:both;}
+		#gameBoard {float:left;margin:0 3rem 1rem 3rem;}
+		#inputForm {}
+		.gameBoardRow {clear:both;}
+		.gameSquare {border:1px solid blue;float:left;height:5rem;margin:2px;width:5rem;}
+		.icon {position:relative;text-align:center;top:40%;width:100%}
+		.row {padding:5px;display:block;}
+	</style>
+</head>
+<body>
+	<header id="page-header">
+        	<h1 class="">The Hidden Gem</h1>
+	</header>
+	<section class="row">
+		<section class="card" id="">
+			<header class="">
+				<h2>Find the Hidden Gem Before Time Runs Out (just kidding there's no timer in this version)</h2>
+			</header>
+			<div class="card-block">
+				<p class="card-text">In this game you have to find a hidden gem in a 3 by 3 grid. When the game starts the gem is randomly placed in the grid. You make a guess between 1 and 9 or by clicking a sqaure. A wrong guess will be marked with an “O”. You can continue to guess until the gem is found. When the gem is found, you win the round. Only input numbers from 1 to 9. To reset the board, simply click “Clear”.</p>
+			</div>
+		</section>
+		<section class="">
+			<div class="" style="float:left;">
+				<div id="gameBoard"></div>
+			</div>
+			<div style="border:1px solid black;float:left;padding:10px;">
+				<div id="inputForm" style="">
+					<label>Place your guess below:</label><br />
+					<input type="text" id="inputGuess"><br />
+					<button onclick="TODO()">Guess!</button>
+					<button onclick="TODO()">Clear</button>
+				</div>
+				<div style="">
+					<div id="message"></div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<footer class="footer">
+		<div class="">
+			<small class="text-primary">&copy; The Hidden Gem</small>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="gem.js"></script>
+	<script>$(document).ready( buildGameBoard(9) );</script>
+</body>
+</html>
