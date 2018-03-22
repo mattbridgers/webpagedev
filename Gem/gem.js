@@ -12,7 +12,7 @@ function newGem(size)
 {
 	console.log('new game');
 	//TODO - replace below with logic to randomize the gem position
-	gem = 1;
+	gem = Math.floor(Math.random() * 9) + 1;
 	return gem;
 }
 
