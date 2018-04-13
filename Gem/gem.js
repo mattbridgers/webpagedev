@@ -55,8 +55,15 @@ function checkGuessClick( guess )
 	console.log('check guess click' + guess);
 	var gamePiece = '#'+guess;
 	
+	 
+	
 	//TODO - insert logic here to check the guess
-}
+ var userGuess = Number(guessField.value);
+  if (guessCount === 1) {
+    guesses.textContent = 'Previous guesses: ';
+ 
+  }
+
 
 //make sure guess is in the allowable values (nine squares, possible guess 1-9)
 //see if guess matches the assigned squre for the gem
