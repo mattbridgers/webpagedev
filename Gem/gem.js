@@ -12,7 +12,8 @@ function newGem(size)
 {
 	console.log('new game');
 	//TODO - replace below with logic to randomize the gem position
-	gem = 1;
+	gem = Math.floor(Math.random() * 9) + 1;
+	console.log('new game number: ' + gem);
 	return gem;
 }
 
@@ -52,18 +53,24 @@ function buildGameBoard(size)
 */
 function checkGuessClick( guess )
 {
-	console.log('check guess click' + guess);
+	console.log('check guess click ' + guess + ' gem value ' + gem);
 	var gamePiece = '#'+guess;
-	
-	 
+	var message = document.getElementById("message");
+	var guessSquare = document.getElementById(guess);
 	
 	//TODO - insert logic here to check the guess
- var userGuess = Number(guessField.value);
-  if (guessCount === 1) {
-    guesses.textContent = 'Previous guesses: ';
- 
-  }
-
+	if( guess == gem )
+	{
+		message.innerHTML = "<p>Correct Guess</p>";
+		guessSquare.innerHTML = "*";
+	}
+	else
+	{
+		message.innerHTML = "<p>Wrong Guess</p>";
+		guessSquare.innerHTML = "X";
+	}
+	
+}
 
 //make sure guess is in the allowable values (nine squares, possible guess 1-9)
 //see if guess matches the assigned squre for the gem
@@ -72,9 +79,19 @@ function checkGuessButton( guess )
 	console.log('check guess button');
 	
 	var guess = jQuery('#inputGuess')[0].value;
-	console.log( guess );
+	
+	console.log( jQuery('#inputGuess')[0] );
 	
 	var gamePiece = '#'+guess;
+	
+	if( guess == gem )
+	{
+		
+	}
+	else
+	{
+		
+	}
 
 	//TODO - insert logic here
 	//TODO - use div id message to display any necessary messages
