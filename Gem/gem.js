@@ -69,7 +69,9 @@ function checkGuessClick( guess )
 		message.innerHTML = "<p>Wrong Guess</p>";
 		guessSquare.innerHTML = "X";
 	}
-	
+	  else if(guess > 9) {
+                        alert("not allowable");
+                       
 }
 
 //make sure guess is in the allowable values (nine squares, possible guess 1-9)
